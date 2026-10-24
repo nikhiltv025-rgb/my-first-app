@@ -44,6 +44,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 @keyframes up{from{opacity:0;transform:translateY(24px)}}
 .hero h1,.hero .l,.hero .cta,.hero .eyebrow{animation:up .8s both}.hero .l{animation-delay:.1s}.hero .cta{animation-delay:.2s}
 /* services */
+#q{width:100%;max-width:420px;padding:12px 16px;margin-bottom:14px;border:1.5px solid var(--line);border-radius:999px;font:inherit;font-size:16px;background:var(--surface);color:var(--ink)}#q:focus{outline:2px solid var(--brand);border-color:transparent}.none{grid-column:1/-1;color:var(--muted)}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
 .tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 18px;border-radius:999px;font:500 14px Poppins,sans-serif;cursor:pointer}
 .tab[aria-pressed=true]{background:var(--brand);color:#fff;border-color:var(--brand)}
@@ -71,7 +72,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .book{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
 label,.lbl{display:block;margin-top:14px;font-weight:600;font-size:13px;color:var(--muted)}
-input[type=text],input[type=tel],input[type=date],textarea{width:100%;padding:12px 14px;margin-top:5px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:15px;background:var(--bg);color:var(--ink)}
+input[type=text],input[type=tel],input[type=date],textarea{width:100%;padding:12px 14px;margin-top:5px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink)}
 textarea{min-height:68px;resize:vertical}input:focus,textarea:focus{outline:2px solid var(--brand);border-color:transparent}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.chips label{margin:0}.chips input{position:absolute;opacity:0}
 .chips span{display:inline-block;padding:8px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:14px;cursor:pointer;color:var(--ink);background:var(--bg)}
@@ -98,7 +99,7 @@ footer a{color:#fff}
 <body>
 <nav><div class="wrap"><a class="logo" href="#top">Vaishnavi <span>Home Salon</span></a>
 <div class="links"><a href="#services">Services</a><a href="#offers">Offers</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="btn p s" href="#book">Book Now</a></div></div></nav>
- 
+
 <header class="hero" id="top">
 <div class="blob b1"></div><div class="blob b2"></div>
 <div class="wrap">
@@ -107,18 +108,19 @@ footer a{color:#fff}
   <h1>Parlour-quality glow, <em>right at home</em>.</h1>
   <p class="l">Facial, haircut, waxing, bridal makeup and mehndi, with a professional beautician at your doorstep. Just book on WhatsApp.</p>
   <div class="cta"><a class="btn p" href="#book">✨ Book an Appointment</a><a class="btn g" href="#services">View Services</a></div>
-  <div class="stats"><div><b>6+</b><span>Services</span></div><div><b>₹60</b><span>Starting at</span></div><div><b>At home</b><span>Or at the salon</span></div></div>
+  <div class="stats"><div><b id="cnt">6+</b><span>Services</span></div><div><b id="minp">₹60</b><span>Starting at</span></div><div><b>At home</b><span>Or at the salon</span></div></div>
  </div>
  <aside class="glass"><h3>Popular right now</h3><ul id="heroList"></ul></aside>
 </div></header>
- 
+
 <section id="services"><div class="wrap">
  <p class="eyebrow">Our Services</p><h2>Choose your favourite services</h2>
  <p class="sub">Add as many as you like. Your total and booking summary build automatically below.</p>
+ <input type="search" id="q" placeholder="Search services (e.g. facial, mehndi, nails)" aria-label="Search services">
  <div class="tabs" id="tabs" role="group" aria-label="Category"></div>
  <div class="grid" id="grid"></div>
 </div></section>
- 
+
 <section class="dark" id="why"><div class="wrap">
  <p class="eyebrow">Why Vaishnavi Home Salon</p><h2>Comfort and trust, together</h2>
  <p class="sub">Your convenience and safety come first.</p>
@@ -129,7 +131,7 @@ footer a{color:#fff}
   <div class="f"><span class="ic">🛡️</span><h3>Safe and trusted</h3><p>Women professionals for women, and a record of every booking.</p></div>
  </div>
 </div></section>
- 
+
 <section id="offers"><div class="wrap">
  <p class="eyebrow">Offers</p><h2>Glow while you save</h2><p class="sub">Enter the coupon in the booking form.</p>
  <div class="offers">
@@ -138,12 +140,12 @@ footer a{color:#fff}
   <div class="offer"><h3>Facial Membership</h3><p>Get a 5-facial package and save on every session. WhatsApp us for details.</p><a class="btn s" style="background:#fff;color:#8e24aa" id="memb" href="#" target="_blank" rel="noopener">Ask us</a></div>
  </div>
 </div></section>
- 
+
 <section class="dark" id="how"><div class="wrap">
  <p class="eyebrow">How it works</p><h2>3 simple steps</h2><p class="sub">No app to download, no signup.</p>
  <ol class="steps"><li><h3>Choose services</h3><p>Select one or more services you like.</p></li><li><h3>Pick a date and time</h3><p>At home or at the salon, choose your slot.</p></li><li><h3>Confirm on WhatsApp</h3><p>Send us your booking and we will confirm right away.</p></li></ol>
 </div></section>
- 
+
 <section id="book"><div class="wrap">
  <p class="eyebrow">Book Appointment</p><h2>Lock in your slot</h2><p class="sub">Fill the form and send it on WhatsApp.</p>
  <div class="book">
@@ -167,7 +169,7 @@ footer a{color:#fff}
   </aside>
  </div>
 </div></section>
- 
+
 <section id="faq"><div class="wrap"><p class="eyebrow">FAQ</p><h2>Frequently asked questions</h2><p class="sub"></p>
  <details><summary>How do I pay?</summary><p>You can pay by UPI or cash after the service. For bridal bookings, a small advance is taken to confirm the booking.</p></details>
  <details><summary>How do I cancel or reschedule?</summary><p>Message us on WhatsApp at least 4 hours before the service and we will give you a new slot.</p></details>
@@ -175,25 +177,54 @@ footer a{color:#fff}
  <details><summary>Can I get several services in one visit?</summary><p>Absolutely. Select as many services as you like and they will all be done in one appointment.</p></details>
  <details><summary>What if I have allergies or sensitive skin?</summary><p>Tell us in the note box of the booking form. Your beautician will choose products accordingly.</p></details>
 </div></section>
- 
+
 <footer><div class="wrap"><span class="logo">Vaishnavi Home Salon</span><p>Professional Beauty Services at Home</p>
 <p>📞 <a href="tel:+919482227491">+91 94822 27491</a> &nbsp;|&nbsp; <a id="fw" href="#" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p><p>© <span id="yr"></span> Vaishnavi Home Salon. All rights reserved.</p></div></footer>
- 
+
 <a class="wa-fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 <div class="bar" id="bar"><div><b id="bt">₹0</b><small id="bc">0 services</small></div><a class="btn p s" href="#book">Book Now</a></div>
- 
+
 <script>
 var OWNER="919482227491";            // Your WhatsApp number (with country code 91)
 var HOME_FEE=0;                      // Home service charge (₹). 0 = free
 var COUPONS={FIRST10:{pct:10,label:"FIRST10 (10% off)"},REFER:{pct:5,label:"REFER (5% off)"}};
-var CATS=["All","Hair","Skin","Waxing","Makeup","Mehndi"];
+var CATS=["All","Hair","Skin","Waxing","Makeup","Mehndi","Nails","Spa"];
 var S=[
  {n:"Hair Cut & Styling",c:"Hair",i:"✂️",d:"30 Mins • Professional cut and styling",p:299},
  {n:"Herbal Facial",c:"Skin",i:"🌿",d:"45 Mins • Glow care for all skin types",p:499},
  {n:"Threading",c:"Waxing",i:"🧵",d:"15 Mins • Eyebrow + upper lip",p:60},
  {n:"Full Arms Waxing",c:"Waxing",i:"🍯",d:"30 Mins • Honey/Rica wax",p:249},
  {n:"Mehndi (Simple Design)",c:"Mehndi",i:"🪷",d:"45 Mins • Both hands",p:399},
- {n:"Bridal Glow Package",c:"Makeup",i:"👰",d:"90 Mins • Complete bridal care",p:1499}
+ {n:"Bridal Glow Package",c:"Makeup",i:"👰",d:"90 Mins • Complete bridal care",p:1499},
+ {n:"Hair Trim",c:"Hair",i:"✂️",d:"20 Mins • Tidy up split ends",p:149},
+ {n:"Hair Wash & Blow Dry",c:"Hair",i:"💨",d:"30 Mins • Shampoo, conditioning and blow dry",p:249},
+ {n:"Hair Spa",c:"Hair",i:"💆‍♀️",d:"60 Mins • Deep conditioning for soft, shiny hair",p:699},
+ {n:"Hair Colour (Global)",c:"Hair",i:"🎨",d:"90 Mins • Ammonia-free colour, price by length",p:1299},
+ {n:"Keratin Treatment",c:"Hair",i:"✨",d:"2-3 Hrs • Smooth, frizz-free hair",p:2999},
+ {n:"Party Hairstyle",c:"Hair",i:"💇‍♀️",d:"40 Mins • Curls, braids or updo",p:499},
+ {n:"Cleanup",c:"Skin",i:"🧼",d:"30 Mins • Deep cleansing for fresh skin",p:299},
+ {n:"Fruit Facial",c:"Skin",i:"🍓",d:"40 Mins • Hydrating and refreshing",p:399},
+ {n:"Gold Facial",c:"Skin",i:"🌟",d:"60 Mins • Radiance boost for special occasions",p:899},
+ {n:"De-Tan Treatment",c:"Skin",i:"☀️",d:"30 Mins • Removes tan, evens skin tone",p:449},
+ {n:"Face Bleach",c:"Skin",i:"🍋",d:"20 Mins • Instant brightening",p:199},
+ {n:"Full Face Threading",c:"Waxing",i:"🧵",d:"25 Mins • Eyebrows, forehead, upper lip, chin, sides",p:120},
+ {n:"Underarms Waxing",c:"Waxing",i:"🍯",d:"10 Mins • Quick and gentle",p:99},
+ {n:"Full Legs Waxing",c:"Waxing",i:"🦵",d:"40 Mins • Honey/Rica wax",p:349},
+ {n:"Full Body Waxing",c:"Waxing",i:"🌸",d:"90 Mins • Arms, legs, underarms and more",p:1199},
+ {n:"Party Makeup",c:"Makeup",i:"💄",d:"60 Mins • Full makeup with hairstyle",p:1499},
+ {n:"Engagement / Reception Makeup",c:"Makeup",i:"💍",d:"90 Mins • Long-lasting, camera-ready look",p:2999},
+ {n:"Bridal Makeup (Full)",c:"Makeup",i:"👰‍♀️",d:"2 Hrs • Makeup, hairstyle and draping. Trial available",p:4999},
+ {n:"Saree Draping",c:"Makeup",i:"🥻",d:"20 Mins • Neat pleating and pinning",p:299},
+ {n:"Arabic Mehndi",c:"Mehndi",i:"🪷",d:"1 Hr • Front and back of both hands",p:599},
+ {n:"Feet Mehndi",c:"Mehndi",i:"🦶",d:"40 Mins • Both feet",p:349},
+ {n:"Bridal Mehndi",c:"Mehndi",i:"👰",d:"2-3 Hrs • Detailed design, hands and feet",p:1999},
+ {n:"Manicure",c:"Nails",i:"💅",d:"40 Mins • Shape, clean and moisturise",p:349},
+ {n:"Pedicure",c:"Nails",i:"🦶",d:"45 Mins • Scrub, massage and polish",p:449},
+ {n:"Gel Nail Polish",c:"Nails",i:"💅",d:"30 Mins • Glossy, long-lasting colour",p:249},
+ {n:"Nail Art",c:"Nails",i:"🎀",d:"30 Mins • Designs for both hands",p:299},
+ {n:"Head Massage",c:"Spa",i:"🧖‍♀️",d:"20 Mins • Relaxing oil massage",p:249},
+ {n:"Foot Massage",c:"Spa",i:"🛁",d:"30 Mins • Relieves tired feet",p:299},
+ {n:"Body Polishing",c:"Spa",i:"🫧",d:"75 Mins • Scrub and glow treatment",p:1299}
 ];
 var TIMES=["10:00 AM","11:30 AM","1:00 PM","3:00 PM","4:30 PM","6:00 PM"];
 var $=function(x){return document.getElementById(x)},sel={},cat="All",disc=null;
@@ -205,8 +236,8 @@ $("heroList").innerHTML=S.filter(function(s){return[1,5,0].indexOf(S.indexOf(s))
 $("tabs").innerHTML=CATS.map(function(c){return'<button type="button" class="tab" aria-pressed="'+(c===cat)+'" data-c="'+c+'">'+c+"</button>"}).join("");
 $("slots").innerHTML=TIMES.map(function(t,i){return'<label><input type="radio" name="time" value="'+t+'"'+(i?"":" checked")+"><span>"+t+"</span></label>"}).join("");
 function grid(){
- $("grid").innerHTML=S.map(function(s,i){return{s:s,i:i}}).filter(function(o){return cat==="All"||o.s.c===cat}).map(function(o){var s=o.s,on=sel[o.i];
-  return'<div class="svc'+(on?" on":"")+'"><span class="ic">'+s.i+"</span><h3>"+s.n+"</h3><p>"+s.d+'</p><div class="row"><span class="price">'+R(s.p)+'</span><button type="button" class="add" data-i="'+o.i+'" aria-pressed="'+!!on+'">'+(on?"✓ Added":"+ Add")+"</button></div></div>"}).join("");
+ $("grid").innerHTML=S.map(function(s,i){return{s:s,i:i}}).filter(function(o){return(cat==="All"||o.s.c===cat)&&o.s.n.toLowerCase().indexOf($("q").value.toLowerCase().trim())>-1}).map(function(o){var s=o.s,on=sel[o.i];
+  return'<div class="svc'+(on?" on":"")+'"><span class="ic">'+s.i+"</span><h3>"+s.n+"</h3><p>"+s.d+'</p><div class="row"><span class="price">'+R(s.p)+'</span><button type="button" class="add" data-i="'+o.i+'" aria-pressed="'+!!on+'">'+(on?"✓ Added":"+ Add")+"</button></div></div>"}).join("")||'<p class="none">No services found. Try another search or category.</p>';
 }
 function list(){return Object.keys(sel).map(function(k){return S[k]})}
 function calc(){
@@ -229,6 +260,7 @@ document.addEventListener("click",function(e){
  var a=e.target.closest(".add");if(a){var i=a.dataset.i;if(sel[i])delete sel[i];else sel[i]=1;render()}
 });
 document.addEventListener("change",function(){render()});
+$("q").addEventListener("input",grid);
 $("phone").addEventListener("input",function(){this.value=this.value.replace(/\D/g,"").slice(0,10)});
 $("ca").addEventListener("click",function(){
  var k=$("cp").value.trim().toUpperCase(),m=$("cm");
@@ -250,6 +282,7 @@ $("f").addEventListener("submit",function(e){
  window.open(wa(m),"_blank");
 });
 var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());$("date").min=t.toISOString().slice(0,10);
+$("cnt").textContent=S.length+"+";$("minp").textContent=R(Math.min.apply(null,S.map(function(x){return x.p})));
 render();
 </script>
 </body>
